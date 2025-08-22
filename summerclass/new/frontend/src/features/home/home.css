@@ -1,0 +1,350 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f3f2ef;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* Full-page wrapper */
+.homepage-wrapper {
+    min-height: 100vh;
+    background-color: #f3f2ef;
+    padding: 0;
+}
+
+/* Top navigation */
+.top-navigation {
+    background: #ffffff;
+    padding: 12px 24px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0a66c2;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #666666;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #0a66c2;
+    background-color: #f3f2ef;
+}
+
+.nav-link.active {
+    color: #0a66c2;
+    font-weight: 600;
+}
+
+/* Main content container */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Hero / search section */
+.hero-wrapper {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Quote text */
+.quote {
+    background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+    color: #ffffff;
+    padding: 24px 32px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(10, 102, 194, 0.2);
+}
+
+/* Search input */
+.search-container {
+    position: relative;
+}
+
+.hero-wrapper input[type="text"] {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.hero-wrapper input[type="text"]::placeholder {
+    color: #666666;
+    font-weight: 400;
+}
+
+.hero-wrapper input[type="text"]:focus {
+    border-color: #0a66c2;
+    box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.1);
+}
+
+/* Search tags */
+.search-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pills {
+    padding: 10px 16px;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #666666;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.pills:hover {
+    background: #f3f2ef;
+    border-color: #0a66c2;
+    color: #0a66c2;
+}
+
+.pills.selected {
+    background: #0a66c2;
+    color: #ffffff;
+    border-color: #0a66c2;
+}
+
+/* Results section */
+.results-section {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    padding: 32px;
+}
+
+.results-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.results-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.results-count {
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Results cards */
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #0a66c2;
+    transform: translateY(-1px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.card .position {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.card .company {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.card .location {
+    font-size: 12px;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.connection-status {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.connection-status.connected {
+    background: #ddf4ff;
+    color: #0a66c2;
+}
+
+.connection-status.not-connected {
+    background: #f3f2ef;
+    color: #666666;
+}
+
+.connect-btn {
+    margin-top: 16px;
+    padding: 8px 16px;
+    border: 1px solid #0a66c2;
+    background: #ffffff;
+    color: #0a66c2;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.connect-btn:hover {
+    background: #0a66c2;
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 16px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+    
+    .main-content {
+        padding: 16px;
+    }
+    
+    .hero-wrapper, .results-section {
+        padding: 24px 16px;
+    }
+    
+    .results {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-tags {
+        gap: 8px;
+    }
+    
+    .pills {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+    
+    .nav-links {
+        gap: 12px;
+    }
+    
+    .quote {
+        font-size: 16px;
+        padding: 20px 16px;
+    }
+    
+    .hero-wrapper input[type="text"] {
+        font-size: 14px;
+    }
+}
